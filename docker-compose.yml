@@ -1,0 +1,72 @@
+version: '2'
+
+services:
+  db:
+    container_name: jw_db
+    image: mariadb:latest
+    environment:
+      - MYSQL_ROOT_PASSWORD=123
+      - MYSQL_DATABASE=db
+      - MYSQL_USER=user
+      - MYSQL_PASSWORD=123
+    volumes:
+      - universal-data:/var/lib/mysql
+    networks:
+      - universal
+
+  nginx:
+    container_name: jw_nginx
+    image: nginx:latest
+    links:
+      - php:php-fpm
+    ports:
+      - "32677:80"
+    volumes:
+      - ./dev/nginx/site.conf:/etc/nginx/conf.d/default.conf:ro
+      - .:/var/www/html
+    networks:
+      - universal
+    working_dir: /var/www/html
+
+  php:
+    container_name: jw_php
+    build:
+      context: .
+      dockerfile: ./dev/php/Dockerfile
+    environment:
+      PHP_IDE_CONFIG: "serverName=Docker-xdebug"
+    links:
+        - db:db
+    volumes:
+      - .:/var/www/html
+      - ./dev/php/php.ini:/usr/local/etc/php/php.ini
+    networks:
+      - universal
+    working_dir: /var/www/html
+    expose:
+      - 9000
+    depends_on:
+      - db
+
+  npm:
+    container_name: jw_npm
+    image: node:9
+    volumes:
+      - .:/var/www/html
+    working_dir: /var/www/html
+
+  redis:
+    container_name: jw_redis
+    image: redis:latest
+    networks:
+      - universal
+    ports:
+      - "6377:6377"
+
+networks:
+  universal:
+    driver: "bridge"
+
+volumes:
+  universal-data:
+    driver: "local"
