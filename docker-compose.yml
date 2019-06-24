@@ -20,7 +20,7 @@ services:
     links:
       - php:php-fpm
     ports:
-      - "32677:80"
+      - "80"
     volumes:
       - ./dev/nginx/site.conf:/etc/nginx/conf.d/default.conf:ro
       - .:/var/www/html
