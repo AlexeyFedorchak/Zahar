@@ -5,3 +5,4 @@
     <link rel="stylesheet" type="text/css" href="slick/slick.css"/>
     <link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/>
     <link rel="stylesheet" href="css/tooplate-style.css">
+    <link rel="stylesheet" href="css/custom.css">
