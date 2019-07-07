@@ -1,0 +1,21 @@
+{
+    "name": "gmail-logo/generator",
+    "description": "The gmail logo generator on PHP. Beta version customized for Laravel, can be used with any PHP framework or in low PHP developement.",
+    "authors": [
+        {
+            "name": "OleksiiFedorchak",
+            "email": "ofedorchak68@gmail.com"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {},
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/OleksiiFedorchak/GmailLogo"
+        }
+    ],
+    "require": {
+        "php": "^7.0"
+    }
+}

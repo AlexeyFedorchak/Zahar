@@ -621,6 +621,36 @@
         ]
     },
     {
+        "name": "gmail-logo/generator",
+        "version": "0.0.0",
+        "version_normalized": "0.0.0.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/OleksiiFedorchak/GmailLogo.git",
+            "reference": "aabd82e988457a65ada1b6ec51d50ace8fd2ffbb"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/OleksiiFedorchak/GmailLogo/zipball/aabd82e988457a65ada1b6ec51d50ace8fd2ffbb",
+            "reference": "aabd82e988457a65ada1b6ec51d50ace8fd2ffbb",
+            "shasum": ""
+        },
+        "require": {
+            "php": "^7.0"
+        },
+        "time": "2019-07-07T13:33:16+00:00",
+        "type": "library",
+        "installation-source": "dist",
+        "notification-url": "https://packagist.org/downloads/",
+        "authors": [
+            {
+                "name": "OleksiiFedorchak",
+                "email": "ofedorchak68@gmail.com"
+            }
+        ],
+        "description": "The gmail logo generator on PHP. Beta version customized for Laravel, can be used with any PHP framework or in low PHP developement."
+    },
+    {
         "name": "hamcrest/hamcrest-php",
         "version": "v2.0.0",
         "version_normalized": "2.0.0.0",

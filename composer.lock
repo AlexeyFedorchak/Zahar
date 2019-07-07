@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "94d4bf9ac7f4a933030e46a346ee2917",
+    "content-hash": "73562a9915c1810c6980d43495a68c51",
     "packages": [
         {
             "name": "dnoegel/php-xdg-base-dir",
@@ -376,6 +376,34 @@
                 "trusted proxy"
             ],
             "time": "2019-01-10T14:06:47+00:00"
+        },
+        {
+            "name": "gmail-logo/generator",
+            "version": "0.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/OleksiiFedorchak/GmailLogo.git",
+                "reference": "aabd82e988457a65ada1b6ec51d50ace8fd2ffbb"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/OleksiiFedorchak/GmailLogo/zipball/aabd82e988457a65ada1b6ec51d50ace8fd2ffbb",
+                "reference": "aabd82e988457a65ada1b6ec51d50ace8fd2ffbb",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^7.0"
+            },
+            "type": "library",
+            "notification-url": "https://packagist.org/downloads/",
+            "authors": [
+                {
+                    "name": "OleksiiFedorchak",
+                    "email": "ofedorchak68@gmail.com"
+                }
+            ],
+            "description": "The gmail logo generator on PHP. Beta version customized for Laravel, can be used with any PHP framework or in low PHP developement.",
+            "time": "2019-07-07T13:33:16+00:00"
         },
         {
             "name": "jakub-onderka/php-console-color",
